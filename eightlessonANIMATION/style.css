@@ -1,0 +1,119 @@
+.btn button{
+    padding: 10px 24px;
+    background-color: black;
+    color: black;
+    transition: background-color 0.9ms linear 1s;
+
+}
+
+.btn:hover{
+    background-color: navy;
+    width: 200px;
+    color: red;
+
+}
+
+
+
+.btn2 button{
+    padding: 10px 24px;
+    background-color: black;
+    color: black;
+}
+
+.btn2:active{
+    background-color: navy;
+    width: 200px;
+    color: red;
+
+}
+
+
+.input{
+    padding: 12px;
+    border: 2px solid gray;
+    border-radius: 12px;
+    outline: none;
+}
+
+.input:focus{
+    border-color: dodgerblue;
+}
+
+
+.btn3{
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn3:hover{
+    background-color: rgb(240,109,16);
+}
+
+
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+}
+
+.box:hover{
+    transform: scale(1.1);
+    transform: translateX(-10px);
+    transform: rotate(15deg);
+    transform: translateY(-8px);
+}
+
+
+/* ПРАКТИКА */
+
+
+.btn4{
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.btn4:hover{
+    background-color: rgb(181, 181, 181);
+    transform: scale(0.9);
+}
+
+
+
+.input2{
+    padding: 12px;
+    border: 2px solid gray;
+    border-radius: 12px;
+    outline: none;
+}
+
+.input2:focus{
+    border-color: rgb(30, 255, 221);
+}
+
+.card:hover{
+     transform: translateX(-10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
