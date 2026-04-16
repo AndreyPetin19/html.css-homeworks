@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Домашняя работа</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(-40px);
+      animation: slideDown 1s ease forwards;
+    }
+
+    .hero-text {
+      font-size: 18px;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: white;
+      color: #2575fc;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 12px;
+      animation: pulse 1.8s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      transform: scale(1.08);
+    }
+
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.06);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .btn-fill {
+      background: #2575fc;
+      color: white;
+    }
+
+    .btn-fill:hover {
+      background: #0f5be0;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(37, 117, 252, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ff4d6d;
+      border: 2px solid #ff4d6d;
+    }
+
+    .btn-outline:hover {
+      background: #ff4d6d;
+      color: white;
+      box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
+    }
+
+    .btn-glow {
+      background: #111;
+      color: #fff;
+      position: relative;
+    }
+
+    .btn-glow:hover {
+      box-shadow: 0 0 10px #00e5ff, 0 0 25px #00e5ff;
+      transform: scale(1.05);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.16);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .card-price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2575fc;
+    }
+
+    .loader-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+    }
+
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 6px solid #d9e4ff;
+      border-top: 6px solid #2575fc;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <h1 class="hero-title">HW </h1>
+      <p class="hero-text">ANIMATION</p>
+      <a href="#" class="hero-btn">Подробнее</a>
+    </section>
+
+    <section>
+      <h2>3 кнопки с hover-эффектами</h2>
+      <div class="buttons">
+        <button class="btn btn-fill">Синяя кнопка</button>
+        <button class="btn btn-outline">Outline кнопка</button>
+        <button class="btn btn-glow">Glow кнопка</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>2 карточки товара</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Кроссовки">
+          <div class="card-content">
+            <h3 class="card-title">Кроссовки Air Run</h3>
+            <p class="card-text">Легкие и удобные кроссовки для спорта и повседневной носки.</p>
+            <div class="card-price">19 990 ₸</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="Часы">
+          <div class="card-content">
+            <h3 class="card-title">Смарт-часы X-Time</h3>
+            <p class="card-text">Стильные часы с функцией отслеживания активности и уведомлений.</p>
+            <div class="card-price">29 990 ₸</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Loader на @keyframes</h2>
+      <div class="loader-wrap">
+        <div class="loader"></div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
