@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop with API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="loginScreen" class="screen">
+        <h1>Авторизация</h1>
+
+        <form id="loginForm">
+            <input id="usernameInput" type="text" placeholder="Username">
+            <input id="passwordInput" type="password" placeholder="Password">
+            <button type="submit">Войти</button>
+        </form>
+
+        <p id="loginMessage"></p>
+    </section>
+
+    <section id="profileScreen" class="screen hidden">
+        <h1>Профиль</h1>
+
+        <div id="profileBlock" class="profile"></div>
+
+        <button id="goToProductsBtn">Перейти к товарам</button>
+        <button id="logoutBtn">Выйти</button>
+    </section>
+
+    <section id="productsScreen" class="screen hidden">
+        <h1>Товары</h1>
+
+        <button id="backtoProfileBtn">Профиль</button>
+
+        <div id="productsBlock" class="products"></div>
+    </section>
+
+    <section id="detailScreen" class="screen hidden">
+        <h1>Информация о товаре</h1>
+
+        <button id="backToProductsBtn">Назад к товарам</button>
+
+        <div id="productDetailBlock" class="detail"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
